@@ -68,7 +68,7 @@ def pregunta_01():
 
     # Remueva la columna `veil-type` del DataFrame `df`.
     # Esta columna tiene un valor constante y no sirve para la detección de hongos.
-    df.drop(['veil-type'], axis=1, inplace=True)
+    df.drop(['veil_type'], axis=1, inplace=True)
 
     # Asigne la columna `type` a la variable `y`.
     y = df['type']
@@ -170,6 +170,5 @@ def pregunta_04():
         y_true=y_test,
         y_pred=pipeline.predict(X_test),
     )
-
     # Retorne la matriz de confusion de entrenamiento y prueba
     return cfm_train, cfm_test
